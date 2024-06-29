@@ -39,7 +39,7 @@ const SavedVideos = () => (
             {savedVideos.length > 0 ? (
               <SavedVideoList>
                 {savedVideos.map(each => (
-                  <VideoCard key={each.isDarkTheme} videoDetails={each} />
+                  <VideoCard key={each.id} videoDetails={each} />
                 ))}
               </SavedVideoList>
             ) : (

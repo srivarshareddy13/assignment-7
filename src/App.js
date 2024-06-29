@@ -10,7 +10,7 @@ import TrendingVideos from './components/TrendingVideos'
 import SavedVideos from './components/SavedVideos'
 import NotFound from './components/NotFound'
 
-import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
+import ThemeAndVideoContext from './context/ThemeAndVideoContext'
 
 // Replace your code here
 class App extends Component {

@@ -18,7 +18,7 @@ const VideoCard = props => {
   const {
     id,
     title,
-    thumnnailUrl,
+    thumbnailUrl,
     viewCount,
     publishedAt,
     name,
@@ -35,7 +35,7 @@ const VideoCard = props => {
           <ItemLink to={`/videos/${id}`} className="Link">
             <TrendingListItem>
               <TrendingThumbNailImage
-                src={thumnnailUrl}
+                src={thumbnailUrl}
                 alt="video thumbnail"
               />
               <TrendingVideoDetails>

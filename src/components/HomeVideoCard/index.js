@@ -13,14 +13,12 @@ import {
   ViewsAndDate,
 } from './styledComponents'
 
-import './index.css'
-
 const HomeVideoCard = props => {
   const {video} = props
   const {
     id,
     title,
-    thumnnailUrl,
+    thumbnailUrl,
     viewCount,
     publishedAt,
     name,
@@ -36,7 +34,7 @@ const HomeVideoCard = props => {
         return (
           <Link to={`/videos/${id}`} className="Link">
             <ListItem>
-              <ThumbNailItem src={thumnnailUrl} alt="video thumbnail" />
+              <ThumbNailItem src={thumbnailUrl} alt="video thumbnail" />
               <VideoDetails>
                 <ProfileImage src={profileImageUrl} alt="channel logo" />
                 <ContentSection>

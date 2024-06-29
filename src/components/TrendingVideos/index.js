@@ -47,7 +47,7 @@ class TrendingVideos extends Component {
     }
 
     const response = await fetch(url, options)
-    if (response.ok === true) {
+    if (response.ok) {
       const data = await response.json()
       const updatedData = data.videos.map(each => ({
         id: each.id,
@@ -120,7 +120,7 @@ class TrendingVideos extends Component {
               <NavigationBar />
               <TrendingContainer
                 data-testid="trending"
-                bgColor={bgColor}
+                style={{backgroundColor: bgColor}}
                 onClick={toggleTheme}
               >
                 <TrendingVideoTitle>

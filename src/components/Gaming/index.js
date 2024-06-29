@@ -3,6 +3,7 @@ import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 
 import {SiYoutubegaming} from 'react-icons/si'
+
 import Header from '../Header'
 import NavigationBar from '../NavigationBar'
 import FailureView from '../FailureView'
@@ -47,7 +48,7 @@ class Gaming extends Component {
     }
 
     const response = await fetch(url, options)
-    if (response.ok === true) {
+    if (response.ok) {
       const data = await response.json()
       const updatedData = data.videos.map(each => ({
         id: each.id,

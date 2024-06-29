@@ -1,5 +1,3 @@
-import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
-
 import {
   ItemLink,
   GamingListItem,
@@ -9,9 +7,11 @@ import {
   GamingViewAndDate,
 } from './styledComponents'
 
+import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
+
 const GameVideoCard = props => {
   const {videoDetails} = props
-  const {id, title, thumbnail, viewcount} = videoDetails
+  const {id, title, thumbnailUrl, viewCount} = videoDetails
 
   return (
     <ThemeAndVideoContext.Consumer>
@@ -22,11 +22,11 @@ const GameVideoCard = props => {
         return (
           <ItemLink to={`/videos/${id}`} className="Link">
             <GamingListItem>
-              <GamingThumbNailImage src={thumbnail} alt="video thumbnail" />
+              <GamingThumbNailImage src={thumbnailUrl} alt="video thumbnail" />
               <GamingContentSection>
                 <GamingTitle color={textColor}>{title}</GamingTitle>
                 <GamingViewAndDate color={textColor}>
-                  {viewcount} Watching WorldWide
+                  {viewCount} Watching WorldWide
                 </GamingViewAndDate>
               </GamingContentSection>
             </GamingListItem>

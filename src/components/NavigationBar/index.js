@@ -3,6 +3,7 @@ import {AiFillHome} from 'react-icons/ai'
 import {HiFire} from 'react-icons/hi'
 import {SiYoutubegaming} from 'react-icons/si'
 import {CgPlayListAdd} from 'react-icons/cg'
+
 import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 
 import {
@@ -47,7 +48,7 @@ class NavigationBar extends Component {
 
         return (
           <NavBar>
-            <NavigationLgContainer>
+            <NavigationLgContainer bgColor={bgColor}>
               <NavOptions>
                 <NavLink to="/">
                   <NavLinkContainer
@@ -98,7 +99,7 @@ class NavigationBar extends Component {
                       size={30}
                       color={activeTab === 'Saved' ? '#ff0b37' : '#909090'}
                     />
-                    <NavText color={textColor}>Saved</NavText>
+                    <NavText color={textColor}>Saved videos</NavText>
                   </NavLinkContainer>
                 </NavLink>
               </NavOptions>

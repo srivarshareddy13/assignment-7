@@ -1,4 +1,4 @@
-import Cookies from 'js-cookie'
+import Cookie from 'js-cookie'
 import {Component} from 'react'
 import {Redirect} from 'react-router-dom'
 import {
@@ -34,16 +34,16 @@ class Login extends Component {
 
   onSubmitSuccess = token => {
     const {history} = this.props
-    Cookies.set('jwt_token', token, {expires: 30, path: '/'})
+    Cookie.set('jwt_token', token, {expires: 30, path: '/'})
     history.replace('/')
   }
 
-  onSubmitFailure = err => this.setState({showError: true, errorMsg: err})
+  onSubmitFailure = errorMsg => this.setState({showError: true, errorMsg})
 
   onSubmitForm = async event => {
     event.preventDefault()
     const {username, password} = this.state
-    const {userDetails} = {username, password}
+    const userDetails = {username, password}
     const apiUrl = 'https://apis.ccbp.in/login'
     const options = {
       method: 'POST',
@@ -104,7 +104,7 @@ class Login extends Component {
 
   render() {
     const {showError, errorMsg} = this.state
-    const token = Cookies.get('jwt_token')
+    const token = Cookie.get('jwt_token')
     if (token !== undefined) {
       return <Redirect to="/" />
     }
@@ -118,7 +118,7 @@ class Login extends Component {
           <InputContainer>{this.renderUsername()}</InputContainer>
           <InputContainer>{this.renderPassword()}</InputContainer>
           <LoginButton type="submit">Login</LoginButton>
-          {showError && <SubmitError>{errorMsg}</SubmitError>}
+          {showError && <SubmitError>*{errorMsg}</SubmitError>}
         </FormContainer>
       </AppContainer>
     )

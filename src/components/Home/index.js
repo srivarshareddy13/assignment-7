@@ -1,7 +1,8 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
-import {AiOutLineSearch, AiOutLineClose} from 'react-icons/ai'
+
+import {AiOutlineSearch, AiOutlineClose} from 'react-icons/ai'
 import Header from '../Header'
 import NavigationBar from '../NavigationBar'
 import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
@@ -55,7 +56,7 @@ class Home extends Component {
     }
 
     const response = await fetch(url, options)
-    if (response.ok === true) {
+    if (response.ok) {
       const data = await response.json()
       const updatedData = data.videos.map(each => ({
         id: each.id,
@@ -138,20 +139,20 @@ class Home extends Component {
                 <BannerContainer data-testid="banner" display={display}>
                   <BannerLeftPart>
                     <BannerImage
-                      arc="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+                      src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
                       alt="nxt watch logo"
                     />
                     <BannerText>
                       Buy Nxt Watch Premium prepaid plans with <br /> UPI
                     </BannerText>
-                    <BannerButton>GET IT NOW</BannerButton>
+                    <BannerButton type="button">GET IT NOW</BannerButton>
                   </BannerLeftPart>
                   <BannerRightPart>
                     <BannerCloseButton
                       data-testid="close"
                       onClick={this.onCloseBanner}
                     >
-                      <AiOutLineClose size={25} />
+                      <AiOutlineClose size={25} />
                     </BannerCloseButton>
                   </BannerRightPart>
                 </BannerContainer>
@@ -167,7 +168,7 @@ class Home extends Component {
                     data-testid="searchButton"
                     onClick={this.getSearchResults}
                   >
-                    <AiOutLineSearch size={20} />
+                    <AiOutlineSearch size={20} />
                   </SearchIconContainer>
                 </SearchContainer>
                 {this.renderHomeVideos()}

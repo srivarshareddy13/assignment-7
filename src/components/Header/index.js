@@ -53,7 +53,7 @@ const Header = props => (
           <ActionsContainer>
             <ThemeButton
               type="button"
-              onChange={onChangeTheme}
+              onClick={onChangeTheme}
               data-testid="theme"
             >
               {isDartTheme ? (

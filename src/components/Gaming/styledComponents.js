@@ -37,7 +37,7 @@ export const GamingText = styled.h1`
         font-size: 35px;
     }
 `
-export const LoaderConatiner = styled.div`
+export const LoaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

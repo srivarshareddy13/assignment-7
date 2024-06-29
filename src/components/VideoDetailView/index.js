@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
+
 import Header from '../Header'
 import NavigationBar from '../NavigationBar'
 import FailureView from '../FailureView'
@@ -44,7 +45,7 @@ class VideoDetailView extends Component {
     }
 
     const response = await fetch(url, options)
-    if (response.ok === true) {
+    if (response.ok) {
       const data = await response.json()
       const updatedData = data.videos.map(each => ({
         id: each.video_details.id,

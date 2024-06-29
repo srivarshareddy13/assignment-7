@@ -11,7 +11,7 @@ export const VideoDetailViewContainer = styled.div`
     margin-left: 250px;
   }
 `
-export const LoaderConatiner = styled.div`
+export const LoaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

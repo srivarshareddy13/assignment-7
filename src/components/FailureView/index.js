@@ -1,12 +1,11 @@
+import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 import {
   FailedView,
   FailedImage,
   FailedHeading,
   FailedNote,
   RetryButton,
-} from './styledComponents'
-
-import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
+} from './styledComponnets'
 
 const FailureView = props => {
   const {onRetry} = props
