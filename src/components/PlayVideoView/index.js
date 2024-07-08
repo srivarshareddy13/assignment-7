@@ -12,7 +12,6 @@ import {
   PlayVideoStatusContainer,
   PlaySocialButtonContainer,
   SocialButton,
-  ButtonText,
   HrLine,
   ChannelImage,
   ChannelContainer,
@@ -74,7 +73,7 @@ const PlayVideoView = props => {
                     onClick={onClickLike}
                   >
                     <AiOutlineLike size={25} />
-                    <ButtonText>Like</ButtonText>
+                    Like
                   </SocialButton>
                   <SocialButton
                     type="button"
@@ -82,7 +81,7 @@ const PlayVideoView = props => {
                     onClick={onClickDisLike}
                   >
                     <AiOutlineDislike size={25} />
-                    <ButtonText>Dislike</ButtonText>
+                    Dislike
                   </SocialButton>
                 </BtnContainer>
                 <BtnContainer>
@@ -92,7 +91,7 @@ const PlayVideoView = props => {
                     onClick={onClickSave}
                   >
                     <BiListPlus size={25} />
-                    <ButtonText>{isSaved ? 'Saved' : 'Save'}</ButtonText>
+                    {isSaved ? 'Saved' : 'Save'}
                   </SocialButton>
                 </BtnContainer>
               </PlaySocialButtonContainer>

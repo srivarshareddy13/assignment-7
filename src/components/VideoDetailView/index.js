@@ -1,4 +1,4 @@
-import {Component} from 'react'
+                                                                      import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 
@@ -36,7 +36,7 @@ class VideoDetailView extends Component {
     const {id} = params
 
     const token = Cookies.get('jwt_token')
-    const url = `https://apis.ccbp.in/videos/videos/${id}`
+    const url = `https://apis.ccbp.in/videos/${id}`
     const options = {
       headers: {
         Authorization: `Bearer ${token}`,
