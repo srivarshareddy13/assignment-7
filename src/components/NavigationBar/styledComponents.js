@@ -12,9 +12,9 @@ export const NavigationLgContainer = styled.div`
   justify-content: space-between;
   height: 90%;
   width: 250px;
-  background-color: ${props => props.bgColor} @media screen and
-    (max-width: 768px) {
-    display: none;
+  background-color: ${props => props.bgColor};
+  @media screen and(max-width: 768px) {
+     display: none;
   }
 `
 export const NavOptions = styled.ul`
@@ -69,14 +69,14 @@ export const ContactNote = styled.p`
 `
 export const NavigationSmallContainer = styled.nav`
     position: fixed;
-    bottom: 0
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 60px;
     width: 100%;
     padding: 10px;
-    background-color: ${props => props.bgColor}
+    background-color: ${props => props.bgColor};
     @media screen and (min-width: 768px) {
         display: none;
     }

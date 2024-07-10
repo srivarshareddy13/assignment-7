@@ -30,7 +30,7 @@ export const TitleIconContainer = styled.div`
   }
 `
 export const TrendingText = styled.h1`
-    font-family: 'Roboto'
+    font-family: 'Roboto';
     font-size: 25px;
     color: ${props => props.color};
     @media screen and (min-width: 768px) {

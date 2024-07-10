@@ -5,7 +5,7 @@ export const NotFoundContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     min-height: 90vh;
-    background-color: ${props => props.bgColor}
+    background-color: ${props => props.bgColor};
     margin-top: 60px;
     margin-bottom: 60px;
     overflow-y: auto;

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const SavedContainer = styled.div`
-  background-color: ${props => props.bgColor}
+  background-color: ${props => props.bgColor};
   min-height: 100vh;
   margin-top: 60px;
   margin-bottom : 60px;

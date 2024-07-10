@@ -10,8 +10,8 @@ export const NavbarHeader = styled.nav`
   padding: 10px;
   height: 60px;
   width: 100%;
-  background-color: ${props => props.bgColor} @media screen and
-    (min-width: 768px) {
+  background-color: ${props => props.bgColor};
+  @media screen and (min-width: 768px) {
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -46,7 +46,7 @@ export const LogoutButton = styled.button`
     padding-bottom: 5px;
     padding-top: 5px;
     border-radius: 5px;
-    background-color: ${props => props.bgColor}
+    background-color: ${props => props.bgColor};
     color: ${props => props.color};
     border-color: ${props => props.color};
     margin-left: 5px;
@@ -130,7 +130,8 @@ export const ModalDesc = styled.p`
   font-size: 15px;
   margin: 10px;
   color: black;
-  text-align: center @media screen and (min-width: 768px) {
+  text-align: center;
+  @media screen and (min-width: 768px) {
     font-size: 20px;
   }
 `

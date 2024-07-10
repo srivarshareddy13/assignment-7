@@ -58,7 +58,7 @@ export const UserInput = styled.input`
 `
 export const CheckboxContainer = styled.div`
     display: flex;
-    margin: 12px
+    margin: 12px;
     flex-direction: row;
     align-items: center;
 `

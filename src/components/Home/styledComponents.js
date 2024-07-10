@@ -13,13 +13,13 @@ export const HomeContainer = styled.div`
 `
 
 export const BannerContainer = styled.div`
-  background-image: url('https://assets.ccbp.in/frontend/react-js/nxt-watch-banner-bg.png')
+  background-image: url('https://assets.ccbp.in/frontend/react-js/nxt-watch-banner-bg.png');
   width: 100%;
   background-size: cover;
   height: 200px;
   display: ${props => props.display};
   justify-content: space-between;
-  padding: 20px
+  padding: 20px;
 `
 export const BannerLeftPart = styled.div`
   width: 50%;
@@ -34,7 +34,7 @@ export const BannerImage = styled.img`
   width: 30px;
 `
 export const BannerButton = styled.button`
-  border: 1px solid #000000
+  border: 1px solid #000000;
   background: none;
   color: #000000;
   padding-left: 10px;
@@ -45,9 +45,9 @@ export const BannerButton = styled.button`
 export const BannerText = styled.p`
   font-family" 'Roboto';
   font-size: 15px;
-  color: #000000
+  color: #000000;
   @media screen and (min-width: 567px) {
-    font-size: 20px
+    font-size: 20px;
   }
 `
 export const BannerCloseButton = styled.button`
